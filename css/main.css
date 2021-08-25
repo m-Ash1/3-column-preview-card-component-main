@@ -1,0 +1,101 @@
+/* 
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+*/
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: hsl(0, 0%, 95%);
+}
+
+.wrapper {
+  width: 950px;
+  display: flex;
+  justify-content: center;
+}
+.card-grid {
+  border-radius: 10px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 310px);
+  grid-template-rows: 500px;
+}
+.card {
+  padding: 50px;
+}
+.image {
+  height: 70px;
+}
+.heading {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 40px;
+  font-weight: bold;
+  color: hsl(0, 0%, 95%);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.desc {
+  font-family: "Lexend Deca", sans-serif;
+  margin-top: 20px;
+  font-size: 15px;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 25px;
+}
+.btn {
+  margin-top: 100px;
+}
+.button {
+  background-color: hsl(0, 0%, 95%);
+  width: 150px;
+  text-align: center;
+  padding: 15px 10px;
+  border-radius: 50px;
+  color: hsl(31, 77%, 52%);
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.sedans {
+  background-color: hsl(31, 77%, 52%);
+}
+.suvs {
+  background-color: hsl(184, 100%, 22%);
+}
+.suvs .button {
+  color: hsl(184, 100%, 22%);
+}
+.luxury {
+  background-color: hsl(179, 100%, 13%);
+}
+.luxury .button {
+  color: hsl(179, 100%, 13%);
+}
+
+.button:hover {
+  background-color: transparent;
+  border: 1px hsl(0, 0%, 95%) solid;
+  color: hsl(0, 0%, 95%);
+  transition: 0.5s;
+}
+
+@media (max-width: 575px) {
+  .wrapper {
+    width: 95%;
+  }
+  body {
+    height: 170vh;
+    overflow: visible;
+  }
+  .card-grid {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 450px);
+  }
+  .btn {
+    margin-top: 50px;
+  }
+}
